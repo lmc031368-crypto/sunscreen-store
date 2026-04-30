@@ -1,6 +1,6 @@
 "use client";
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Instagram, Linkedin, Twitter, Shield, Droplets, Wind } from 'lucide-react';
+import { ArrowUpRight, Instagram, Linkedin, Twitter } from 'lucide-react';
 
 export default function Home() {
   const transition = { duration: 1.4, ease: [0.76, 0, 0.24, 1] };
@@ -8,7 +8,7 @@ export default function Home() {
   return (
     <main className="bg-[#0f0f0f] text-white min-h-screen font-sans selection:bg-blue-600 overflow-x-hidden">
       
-      {/* 极简导航栏 */}
+      {/* 顶部导航 */}
       <nav className="fixed top-0 w-full z-50 p-8 flex justify-between items-start mix-blend-difference">
         <div className="text-[12px] tracking-[0.6em] font-black uppercase">PURE.DEFENSE</div>
         <div className="hidden md:flex flex-col items-end gap-2 text-[10px] tracking-[0.2em] uppercase font-bold text-neutral-500">
@@ -17,7 +17,7 @@ export default function Home() {
         </div>
       </nav>
 
-      {/* Hero Section - 巨大的排版 */}
+      {/* Hero Section */}
       <section className="h-screen flex flex-col justify-center px-10 relative">
         <div className="max-w-[1800px] mx-auto w-full">
           <motion.div initial={{ y: 200, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={transition}>
@@ -44,7 +44,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 产品视觉展示 - 错位排版 */}
+      {/* 产品视觉展示 */}
       <section className="py-60 bg-white text-black px-10">
         <div className="max-w-[1800px] mx-auto grid md:grid-cols-12 gap-10">
           <div className="md:col-span-7">
@@ -71,7 +71,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* Footer - 社交图标与联系 */}
+      {/* 页脚社交媒体 */}
       <footer className="bg-[#0f0f0f] py-40 px-10 text-center border-t border-white/5">
         <motion.div whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 50 }} transition={transition}>
           <p className="text-[10px] tracking-[0.6em] uppercase mb-12 text-neutral-500 font-bold">Request Collaboration</p>
