@@ -12,17 +12,17 @@ export default function Home() {
 
   const categories = [
     {
-      title: "Daily Defense",
-      desc: "High-density protection for everyday city life.",
+      title: "Gym & Fitness",
+      desc: "High-density durable barrier for intense training.",
       img: "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1000"
     },
     {
-      title: "Professional Sport",
-      desc: "Waterproof & sweatproof for extreme athletes.",
+      title: "Professional Golf",
+      desc: "Sun protection designed for long outdoor hours.",
       img: "https://images.unsplash.com/photo-1598440443997-3243c19fe382?q=80&w=1000"
     },
     {
-      title: "Sensitive Care",
+      title: "Landscape & Pet",
       desc: "Eco-friendly, safe and extremely easy to absorb.",
       img: "https://images.unsplash.com/photo-1617897903246-719242758050?q=80&w=1000"
     }
@@ -30,8 +30,8 @@ export default function Home() {
 
   return (
     <main className="min-h-screen bg-[#F0F7F2]">
-      {/* 顶部 Hero 区域 - 带有背景图 */}
-      <section className="relative h-[60vh] flex items-center justify-center text-white text-center px-4 overflow-hidden">
+      {/* 顶部 Hero 区域 */}
+      <section className="relative h-[55vh] flex items-center justify-center text-white text-center px-4 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
             src="https://images.unsplash.com/photo-1506744038136-46273834b3fb?q=80&w=2000" 
@@ -41,33 +41,33 @@ export default function Home() {
         </div>
         
         <div className="relative z-10 max-w-4xl">
-          <h1 className="text-4xl md:text-5xl font-bold mb-4 drop-shadow-lg">
-            Pure Defense Technology Co., Ltd.
+          <h1 className="text-3xl md:text-5xl font-bold mb-4 drop-shadow-md">
+            Handan Oudoman Sports Technology Co., Ltd.
           </h1>
-          <p className="text-lg md:text-xl font-medium mb-8 opacity-90">
-            Professional Sunscreen Manufacturer
+          <p className="text-base md:text-lg font-medium mb-8 opacity-90 tracking-wide">
+            Professional Artificial Barrier Manufacturer
           </p>
-          <button className="bg-[#2E7D32] text-white px-8 py-3 rounded-md font-bold hover:bg-[#1B5E20] transition shadow-lg">
+          <button className="bg-[#2E7D32] text-white px-8 py-3 rounded-md font-bold hover:bg-[#1B5E20] transition-all transform hover:scale-105 shadow-lg">
             View Technical Parameters (PDF)
           </button>
         </div>
       </nav>
 
-      {/* 中间卡片展示区 - 三栏布局 */}
-      <section className="py-20 px-8 max-w-7xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-8">
+      {/* 产品展示区 - 三栏布局 */}
+      <section className="py-20 px-6 max-w-6xl mx-auto">
+        <div className="grid md:grid-cols-3 gap-6">
           {categories.map((item, index) => (
             <motion.div 
               key={index}
               {...fadeInUp}
-              className="bg-white rounded-2xl overflow-hidden shadow-xl hover:shadow-2xl transition duration-500 text-center"
+              className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 text-center"
             >
-              <div className="h-64 overflow-hidden">
+              <div className="h-56 overflow-hidden">
                 <img src={item.img} className="w-full h-full object-cover hover:scale-110 transition duration-700" alt={item.title} />
               </div>
-              <div className="p-8">
-                <h3 className="text-xl font-bold text-[#2E7D32] mb-4">{item.title}</h3>
-                <p className="text-gray-500 text-sm leading-relaxed">
+              <div className="p-6">
+                <h3 className="text-lg font-bold text-[#2E7D32] mb-3">{item.title}</h3>
+                <p className="text-gray-500 text-xs leading-relaxed">
                   {item.desc}
                 </p>
               </div>
@@ -76,21 +76,21 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 底部联系方式 - 社交图标 */}
-      <footer className="py-16 bg-white border-t border-gray-100 text-center">
+      {/* 底部联系方式 */}
+      <footer className="py-12 bg-white border-t border-gray-100 text-center">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-xl font-bold text-gray-800 mb-8 tracking-wider uppercase">Connect With Us</h2>
+          <h2 className="text-sm font-bold text-gray-700 mb-6 tracking-[0.2em] uppercase">Connect With Us</h2>
           
-          <div className="flex justify-center gap-8 mb-10">
-            <a href="#" className="text-gray-400 hover:text-blue-600 transition"><Instagram size={30} /></a>
-            <a href="#" className="text-gray-400 hover:text-blue-400 transition"><Twitter size={30} /></a>
-            <a href="#" className="text-gray-400 hover:text-green-500 transition"><MessageCircle size={30} /></a>
-            <a href="#" className="text-gray-400 hover:text-red-500 transition"><Mail size={30} /></a>
+          <div className="flex justify-center gap-6 mb-8">
+            <a href="#" className="text-gray-400 hover:text-[#E1306C] transition"><Instagram size={24} /></a>
+            <a href="#" className="text-gray-400 hover:text-[#1DA1F2] transition"><Twitter size={24} /></a>
+            <a href="#" className="text-gray-400 hover:text-[#25D366] transition"><MessageCircle size={24} /></a>
+            <a href="#" className="text-gray-400 hover:text-[#EA4335] transition"><Mail size={24} /></a>
           </div>
 
-          <div className="text-gray-500 text-sm space-y-2">
-            <p className="font-medium hover:text-black cursor-pointer">Email: contact@puredefenselab.com</p>
-            <p className="mt-4 opacity-70">© 2026 PURE DEFENSE LAB. All Rights Reserved.</p>
+          <div className="text-gray-400 text-[10px] space-y-1 tracking-wider">
+            <p className="font-semibold text-gray-600">Email: wangcathy411@gmail.com</p>
+            <p className="opacity-60 pt-4">© 2026 OUDOMAN LAB. All Rights Reserved.</p>
           </div>
         </div>
       </footer>
