@@ -1,84 +1,93 @@
 "use client";
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Instagram, Linkedin, Shield } from 'lucide-react';
+import { ArrowUpRight, Instagram, Linkedin, Twitter, Shield, Droplets, Wind } from 'lucide-react';
 
 export default function Home() {
-  const transition = { duration: 1.2, ease: [0.76, 0, 0.24, 1] };
+  const transition = { duration: 1.4, ease: [0.76, 0, 0.24, 1] };
 
   return (
-    <main className="bg-[#0f0f0f] text-white min-h-screen font-sans selection:bg-blue-600">
-      {/* 顶部导航: 极简线条感 */}
-      <nav className="fixed top-0 w-full z-50 p-8 flex justify-between items-center mix-blend-difference">
-        <div className="text-[12px] tracking-[0.6em] font-black uppercase">Oudoman.Sun</div>
-        <div className="hidden md:flex gap-12 text-[10px] tracking-[0.3em] uppercase font-bold text-neutral-400">
-          <a href="#" className="hover:text-white transition">Collection</a>
-          <a href="#" className="hover:text-white transition">Lab Notes</a>
-          <button className="bg-white text-black px-6 py-2 rounded-full hover:bg-blue-600 hover:text-white transition">Inquiry</button>
+    <main className="bg-[#0f0f0f] text-white min-h-screen font-sans selection:bg-blue-600 overflow-x-hidden">
+      
+      {/* 极简导航栏 */}
+      <nav className="fixed top-0 w-full z-50 p-8 flex justify-between items-start mix-blend-difference">
+        <div className="text-[12px] tracking-[0.6em] font-black uppercase">PURE.DEFENSE</div>
+        <div className="hidden md:flex flex-col items-end gap-2 text-[10px] tracking-[0.2em] uppercase font-bold text-neutral-500">
+          <p>Global Distribution</p>
+          <p className="text-white">v1.0 / 2026</p>
         </div>
       </nav>
 
-      {/* Hero Section: 巨大的排版压力 */}
-      <section className="h-screen flex flex-col justify-center px-10 relative overflow-hidden">
-        <div className="max-w-[1600px] mx-auto w-full">
-          <motion.div initial={{ y: 150, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={transition}>
-            <h1 className="text-[16vw] leading-[0.8] font-bold tracking-[-0.05em] uppercase">
-              Pure<br />
-              <span className="text-neutral-700 ml-[10vw]">Defense</span>
+      {/* Hero Section - 巨大的排版 */}
+      <section className="h-screen flex flex-col justify-center px-10 relative">
+        <div className="max-w-[1800px] mx-auto w-full">
+          <motion.div initial={{ y: 200, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={transition}>
+            <h1 className="text-[18vw] leading-[0.75] font-bold tracking-[-0.06em] uppercase">
+              Solar<br />
+              <span className="text-neutral-800 ml-[12vw]">Shield</span>
             </h1>
           </motion.div>
 
-          <div className="mt-20 flex flex-col md:flex-row justify-between items-end">
+          <div className="mt-24 flex flex-col md:flex-row justify-between items-end border-t border-white/5 pt-12">
             <motion.p 
               initial={{ opacity: 0 }} 
               animate={{ opacity: 1 }} 
-              transition={{ ...transition, delay: 0.5 }}
-              className="text-xl md:text-2xl max-w-xl font-light text-neutral-400 leading-tight"
+              transition={{ ...transition, delay: 0.6 }}
+              className="text-xl md:text-3xl max-w-2xl font-light text-neutral-400 leading-tight tracking-tighter"
             >
-              Clinical-grade mineral protection. <br />
-              Engineered for the modern biological rhythm.
+              Advanced molecular barrier technology. <br />
+              Engineered for extreme solar environments.
             </motion.p>
-            <div className="mt-10 md:mt-0 flex gap-6">
-              <div className="w-16 h-16 rounded-full border border-neutral-700 flex items-center justify-center hover:bg-white hover:text-black transition cursor-pointer">
-                <ArrowUpRight size={24} strokeWidth={1} />
-              </div>
-            </div>
+            <motion.div whileHover={{ rotate: 45 }} className="w-24 h-24 rounded-full border border-neutral-800 flex items-center justify-center cursor-pointer hover:bg-white hover:text-black transition-colors duration-500">
+              <ArrowUpRight size={40} strokeWidth={1} />
+            </motion.div>
           </div>
         </div>
       </section>
 
-      {/* 产品视觉: 类似参考仓库的黑白影像风格 */}
-      <section className="py-40 bg-white text-black px-10">
-        <div className="max-w-[1600px] mx-auto grid md:grid-cols-12 gap-20 items-center">
-          <motion.div 
-            whileInView={{ scale: 1.05 }} 
-            transition={{ duration: 2 }}
-            className="md:col-span-6 aspect-square bg-neutral-100 overflow-hidden"
-          >
-            <img 
-              src="https://images.unsplash.com/photo-1617897903246-719242758050?q=80&w=1500" 
-              className="w-full h-full object-cover grayscale"
-              alt="Lab Bottle"
-            />
-          </motion.div>
-          <div className="md:col-span-5 md:col-start-8">
-            <span className="text-[10px] tracking-[0.4em] text-neutral-400 mb-6 block uppercase">01 / Formulation</span>
-            <h2 className="text-6xl md:text-8xl font-bold tracking-tighter mb-12 uppercase leading-none">The<br/>Liquid<br/>Shield.</h2>
-            <p className="text-neutral-500 text-lg leading-relaxed">
-              Non-nano Zinc Oxide technology that disappears into your skin, leaving a velvet-matte finish with zero white cast.
+      {/* 产品视觉展示 - 错位排版 */}
+      <section className="py-60 bg-white text-black px-10">
+        <div className="max-w-[1800px] mx-auto grid md:grid-cols-12 gap-10">
+          <div className="md:col-span-7">
+            <motion.div 
+              initial={{ clipPath: "inset(100% 0% 0% 0%)" }}
+              whileInView={{ clipPath: "inset(0% 0% 0% 0%)" }}
+              transition={{ duration: 1.5, ease: "easeInOut" }}
+              className="aspect-[16/10] bg-neutral-100 overflow-hidden"
+            >
+              <img 
+                src="https://images.unsplash.com/photo-1617897903246-719242758050?q=80&w=2000" 
+                className="w-full h-full object-cover grayscale"
+                alt="Product"
+              />
+            </motion.div>
+          </div>
+          <div className="md:col-span-4 md:col-start-9 pt-20">
+            <span className="text-[10px] tracking-[0.5em] text-neutral-400 mb-8 block uppercase font-bold">01 / Formulation</span>
+            <h2 className="text-7xl font-bold tracking-tighter mb-12 uppercase leading-[0.9]">Beyond<br/>Invisible.</h2>
+            <p className="text-neutral-500 text-xl leading-relaxed font-light">
+              Our unique non-nano formula creates a seamless mesh that allows skin to breathe while reflecting 99% of harmful UV rays.
             </p>
           </div>
         </div>
       </section>
 
-      {/* 页脚: 社交媒体图标 */}
-      <footer className="py-20 px-10 border-t border-neutral-900 bg-[#0f0f0f]">
-        <div className="flex justify-between items-center text-[10px] tracking-[0.3em] uppercase text-neutral-500">
-          <div className="flex gap-8">
-            <a href="#" className="hover:text-white flex items-center gap-2"><Instagram size={14}/> Instagram</a>
-            <a href="#" className="hover:text-white flex items-center gap-2"><Linkedin size={14}/> LinkedIn</a>
+      {/* Footer - 社交图标与联系 */}
+      <footer className="bg-[#0f0f0f] py-40 px-10 text-center border-t border-white/5">
+        <motion.div whileInView={{ opacity: 1, y: 0 }} initial={{ opacity: 0, y: 50 }} transition={transition}>
+          <p className="text-[10px] tracking-[0.6em] uppercase mb-12 text-neutral-500 font-bold">Request Collaboration</p>
+          <a href="mailto:hello@puredf.com" className="text-[10vw] leading-none tracking-tighter hover:text-blue-600 transition-colors duration-700">
+            CONTACT.LAB
+          </a>
+          
+          <div className="mt-40 flex flex-col md:flex-row justify-between items-center gap-10 text-neutral-500 border-t border-white/5 pt-10 text-[10px] tracking-[0.4em] uppercase font-bold">
+            <div className="flex gap-12">
+              <a href="#" className="hover:text-white flex items-center gap-2"><Instagram size={14}/> Instagram</a>
+              <a href="#" className="hover:text-white flex items-center gap-2"><Linkedin size={14}/> LinkedIn</a>
+              <a href="#" className="hover:text-white flex items-center gap-2"><Twitter size={14}/> Twitter</a>
+            </div>
+            <p>© 2026 PURE DEFENSE GLOBAL</p>
           </div>
-          <p>© 2026 PURE DEFENSE LAB</p>
-        </div>
+        </motion.div>
       </footer>
     </main>
   );
