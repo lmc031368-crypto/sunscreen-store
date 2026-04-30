@@ -15,7 +15,7 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* 隐藏滚动条让页面更像艺术品 */
+/* 隐藏滚动条 */
 ::-webkit-scrollbar {
   display: none;
 }
