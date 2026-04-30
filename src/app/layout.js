@@ -4,8 +4,8 @@ import { Inter } from 'next/font/google'
 const inter = Inter({ subsets: ['latin'] })
 
 export const metadata = {
-  title: 'Pure Defense Lab | Sunscreen Tech',
-  description: 'Advanced molecular barrier technology for extreme solar protection.',
+  title: 'Oudoman Sports | Professional Sunscreen Tech',
+  description: 'Handan Oudoman Sports Technology Co., Ltd. - Professional skin barrier solutions.',
 }
 
 export default function RootLayout({ children }) {
