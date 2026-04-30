@@ -1,93 +1,84 @@
 "use client";
 import { motion } from 'framer-motion';
-import { ArrowUpRight, Instagram, Linkedin, Twitter, Globe } from 'lucide-react';
+import { ArrowUpRight, Instagram, Linkedin, Shield } from 'lucide-react';
 
 export default function Home() {
-  const transition = { duration: 1.4, ease: [0.6, 0.01, -0.05, 0.95] };
+  const transition = { duration: 1.2, ease: [0.76, 0, 0.24, 1] };
 
   return (
-    <main className="bg-[#f2f2f0] text-[#1a1a1a] selection:bg-black selection:text-white min-h-screen">
-      
-      {/* 极简侧边社交栏 - 模仿高端站的固定元素 */}
-      <div className="fixed left-6 bottom-10 z-50 flex flex-col gap-6 text-neutral-400">
-        <motion.a href="#" whileHover={{ scale: 1.2, color: "#000" }}><Instagram size={18} strokeWidth={1.5} /></motion.a>
-        <motion.a href="#" whileHover={{ scale: 1.2, color: "#000" }}><Twitter size={18} strokeWidth={1.5} /></motion.a>
-        <motion.a href="#" whileHover={{ scale: 1.2, color: "#000" }}><Linkedin size={18} strokeWidth={1.5} /></motion.a>
-      </div>
-
-      {/* 顶部导航 */}
-      <nav className="fixed top-0 w-full z-50 p-10 flex justify-between items-center mix-blend-difference text-white">
-        <div className="text-[10px] tracking-[0.5em] font-bold">PD.LAB</div>
-        <div className="flex gap-8 items-center text-[10px] tracking-[0.2em] uppercase font-medium">
-          <span>Global / 2026</span>
-          <div className="w-8 h-[1px] bg-white opacity-30"></div>
-          <button className="hover:opacity-50 transition">Inquiry</button>
+    <main className="bg-[#0f0f0f] text-white min-h-screen font-sans selection:bg-blue-600">
+      {/* 顶部导航: 极简线条感 */}
+      <nav className="fixed top-0 w-full z-50 p-8 flex justify-between items-center mix-blend-difference">
+        <div className="text-[12px] tracking-[0.6em] font-black uppercase">Oudoman.Sun</div>
+        <div className="hidden md:flex gap-12 text-[10px] tracking-[0.3em] uppercase font-bold text-neutral-400">
+          <a href="#" className="hover:text-white transition">Collection</a>
+          <a href="#" className="hover:text-white transition">Lab Notes</a>
+          <button className="bg-white text-black px-6 py-2 rounded-full hover:bg-blue-600 hover:text-white transition">Inquiry</button>
         </div>
       </nav>
 
-      {/* Hero Section - 巨大的文字张力 */}
+      {/* Hero Section: 巨大的排版压力 */}
       <section className="h-screen flex flex-col justify-center px-10 relative overflow-hidden">
         <div className="max-w-[1600px] mx-auto w-full">
-          <motion.div initial={{ y: 80, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={transition}>
-            <h1 className="text-[18vw] leading-[0.8] font-light tracking-[-0.06em] uppercase">
-              Solar<br/>
-              <span className="italic font-serif ml-[8vw] text-blue-600">Bio-Tech</span>
+          <motion.div initial={{ y: 150, opacity: 0 }} animate={{ y: 0, opacity: 1 }} transition={transition}>
+            <h1 className="text-[16vw] leading-[0.8] font-bold tracking-[-0.05em] uppercase">
+              Pure<br />
+              <span className="text-neutral-700 ml-[10vw]">Defense</span>
             </h1>
           </motion.div>
 
-          <div className="mt-24 flex justify-between items-end border-t border-black/5 pt-10">
-            <p className="text-xl md:text-2xl max-w-xl font-light text-neutral-500 leading-tight">
-              A high-performance mineral barrier. <br/>
-              Invisible to the eye, absolute to the skin.
-            </p>
-            <div className="hidden md:flex items-center gap-4 text-[10px] tracking-widest uppercase font-bold">
-              Scroll to explore <div className="w-12 h-[1px] bg-black"></div>
+          <div className="mt-20 flex flex-col md:flex-row justify-between items-end">
+            <motion.p 
+              initial={{ opacity: 0 }} 
+              animate={{ opacity: 1 }} 
+              transition={{ ...transition, delay: 0.5 }}
+              className="text-xl md:text-2xl max-w-xl font-light text-neutral-400 leading-tight"
+            >
+              Clinical-grade mineral protection. <br />
+              Engineered for the modern biological rhythm.
+            </motion.p>
+            <div className="mt-10 md:mt-0 flex gap-6">
+              <div className="w-16 h-16 rounded-full border border-neutral-700 flex items-center justify-center hover:bg-white hover:text-black transition cursor-pointer">
+                <ArrowUpRight size={24} strokeWidth={1} />
+              </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* 产品展示 - 错位布局 */}
-      <section className="py-40 px-10">
-        <div className="max-w-[1600px] mx-auto grid md:grid-cols-12 gap-10">
+      {/* 产品视觉: 类似参考仓库的黑白影像风格 */}
+      <section className="py-40 bg-white text-black px-10">
+        <div className="max-w-[1600px] mx-auto grid md:grid-cols-12 gap-20 items-center">
           <motion.div 
-            whileInView={{ y: -50 }} 
+            whileInView={{ scale: 1.05 }} 
             transition={{ duration: 2 }}
-            className="md:col-span-7 aspect-[16/10] bg-neutral-200 overflow-hidden grayscale hover:grayscale-0 transition-all duration-1000"
+            className="md:col-span-6 aspect-square bg-neutral-100 overflow-hidden"
           >
             <img 
               src="https://images.unsplash.com/photo-1617897903246-719242758050?q=80&w=1500" 
-              className="w-full h-full object-cover"
-              alt="Texture"
+              className="w-full h-full object-cover grayscale"
+              alt="Lab Bottle"
             />
           </motion.div>
-          <div className="md:col-span-4 md:col-start-9 flex flex-col justify-center">
-            <span className="text-[10px] tracking-[0.4em] text-neutral-400 mb-6 uppercase">01 / Invisible</span>
-            <h2 className="text-5xl font-light mb-8 tracking-tighter italic font-serif">Weightless flow.</h2>
-            <p className="text-neutral-500 leading-relaxed font-light">
-              Our formulation mimics the skin's natural lipids, ensuring a seamless application that feels like nothing at all. 
+          <div className="md:col-span-5 md:col-start-8">
+            <span className="text-[10px] tracking-[0.4em] text-neutral-400 mb-6 block uppercase">01 / Formulation</span>
+            <h2 className="text-6xl md:text-8xl font-bold tracking-tighter mb-12 uppercase leading-none">The<br/>Liquid<br/>Shield.</h2>
+            <p className="text-neutral-500 text-lg leading-relaxed">
+              Non-nano Zinc Oxide technology that disappears into your skin, leaving a velvet-matte finish with zero white cast.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Footer - 巨大的联系按钮 */}
-      <footer className="bg-white py-40 px-10 text-center">
-        <motion.div whileInView={{ opacity: 1 }} initial={{ opacity: 0 }}>
-          <p className="text-[10px] tracking-[0.5em] uppercase mb-16 text-neutral-400">Join the defense</p>
-          <a href="mailto:contact@pdlab.com" className="group text-[12vw] leading-none tracking-tighter flex items-center justify-center gap-4">
-            Inquire <ArrowUpRight size={80} strokeWidth={0.5} className="group-hover:rotate-45 transition-transform duration-500" />
-          </a>
-          
-          {/* 页脚底部的社交媒体文字版，更符合极简风格 */}
-          <div className="mt-40 pt-10 border-t border-neutral-100 flex justify-between items-center text-[10px] tracking-[0.3em] uppercase text-neutral-400 font-bold">
-            <div className="flex gap-10">
-              <a href="#" className="hover:text-black transition">Instagram</a>
-              <a href="#" className="hover:text-black transition">Linkedin</a>
-            </div>
-            <p>© 2026 PD.LAB GLOBAL</p>
+      {/* 页脚: 社交媒体图标 */}
+      <footer className="py-20 px-10 border-t border-neutral-900 bg-[#0f0f0f]">
+        <div className="flex justify-between items-center text-[10px] tracking-[0.3em] uppercase text-neutral-500">
+          <div className="flex gap-8">
+            <a href="#" className="hover:text-white flex items-center gap-2"><Instagram size={14}/> Instagram</a>
+            <a href="#" className="hover:text-white flex items-center gap-2"><Linkedin size={14}/> LinkedIn</a>
           </div>
-        </motion.div>
+          <p>© 2026 PURE DEFENSE LAB</p>
+        </div>
       </footer>
     </main>
   );
