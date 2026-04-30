@@ -51,7 +51,7 @@ export default function Home() {
             View Technical Parameters (PDF)
           </button>
         </div>
-      </nav>
+      </section> {/* 这里之前误写成了 </nav>，现在已修正 */}
 
       {/* 产品展示区 - 三栏布局 */}
       <section className="py-20 px-6 max-w-6xl mx-auto">
