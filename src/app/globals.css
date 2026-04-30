@@ -3,18 +3,19 @@
 @tailwind utilities;
 
 body {
-  background-color: #F0F7F2; /* 浅淡的绿灰色背景，模拟图二质感 */
+  background-color: #F0F7F2;
   color: #333;
+  -webkit-font-smoothing: antialiased;
 }
 
-/* 恢复显示滚动条，因为商业页面内容较多 */
+/* 恢复显示细滚动条 */
 ::-webkit-scrollbar {
-  width: 6px;
+  width: 5px;
 }
 ::-webkit-scrollbar-track {
-  background: #f1f1f1;
+  background: #f8f8f8;
 }
 ::-webkit-scrollbar-thumb {
-  background: #ccc;
+  background: #d1d1d1;
   border-radius: 10px;
 }
