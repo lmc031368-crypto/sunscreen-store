@@ -2,25 +2,19 @@
 @tailwind components;
 @tailwind utilities;
 
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
-
 body {
-  background-color: #0f0f0f;
-  color: #ffffff;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+  background-color: #F0F7F2; /* 浅淡的绿灰色背景，模拟图二质感 */
+  color: #333;
 }
 
-/* 隐藏滚动条 */
+/* 恢复显示滚动条，因为商业页面内容较多 */
 ::-webkit-scrollbar {
-  display: none;
+  width: 6px;
 }
-
-::selection {
-  background-color: #2563eb;
-  color: #ffffff;
+::-webkit-scrollbar-track {
+  background: #f1f1f1;
+}
+::-webkit-scrollbar-thumb {
+  background: #ccc;
+  border-radius: 10px;
 }
