@@ -2,11 +2,6 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --background: 240 5% 94%; /* 这种淡淡的灰色比纯白高级很多 */
-  --foreground: 0 0% 10%;
-}
-
 * {
   margin: 0;
   padding: 0;
@@ -14,18 +9,18 @@
 }
 
 body {
-  background-color: rgb(242, 242, 240); /* 匹配 page.js 的背景色 */
-  color: #1a1a1a;
-  -webkit-font-smoothing: antialiased; /* 让文字更清晰细腻 */
+  background-color: #0f0f0f;
+  color: #ffffff;
+  -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
 }
 
-/* 隐藏丑陋的滚动条，让页面像一整张画布 */
+/* 隐藏滚动条让页面更像艺术品 */
 ::-webkit-scrollbar {
   display: none;
 }
 
 ::selection {
-  background-color: #000;
-  color: #fff;
+  background-color: #2563eb;
+  color: #ffffff;
 }
