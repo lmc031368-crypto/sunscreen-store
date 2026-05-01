@@ -10,7 +10,6 @@ export default function Home() {
     transition: { duration: 0.8 }
   };
 
-  // 这里已经根据你的要求更新了产品标题
   const categories = [
     {
       title: "Sunscreen",
@@ -57,7 +56,7 @@ export default function Home() {
         </div>
       </section>
 
-      {/* 产品展示区 - 三栏布局 */}
+      {/* 产品展示区 */}
       <section className="py-20 px-6 max-w-6xl mx-auto">
         <div className="grid md:grid-cols-3 gap-6">
           {categories.map((item, index) => (
