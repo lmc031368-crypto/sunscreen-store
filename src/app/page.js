@@ -1,6 +1,6 @@
 "use client";
 import { motion } from 'framer-motion';
-import { Mail, Instagram, Twitter, MessageCircle } from 'lucide-react';
+import { Mail, Facebook, Twitter, MessageCircle } from 'lucide-react';
 
 export default function Home() {
   const fadeInUp = {
@@ -41,9 +41,12 @@ export default function Home() {
         </div>
         
         <div className="relative z-10 max-w-4xl">
-          <h1 className="text-3xl md:text-5xl font-bold mb-4 drop-shadow-md">
-            Handan Oudoman Sports Technology Co., Ltd.
-          </h1>
+          <motion.h1 
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            className="text-3xl md:text-5xl font-bold mb-4 drop-shadow-md">
+            Handan Yueran Technology Company
+          </motion.h1>
           <p className="text-base md:text-lg font-medium mb-8 opacity-90 tracking-wide">
             Professional Artificial Barrier Manufacturer
           </p>
@@ -51,7 +54,7 @@ export default function Home() {
             View Technical Parameters (PDF)
           </button>
         </div>
-      </section> {/* 这里之前误写成了 </nav>，现在已修正 */}
+      </section>
 
       {/* 产品展示区 - 三栏布局 */}
       <section className="py-20 px-6 max-w-6xl mx-auto">
@@ -82,15 +85,23 @@ export default function Home() {
           <h2 className="text-sm font-bold text-gray-700 mb-6 tracking-[0.2em] uppercase">Connect With Us</h2>
           
           <div className="flex justify-center gap-6 mb-8">
-            <a href="#" className="text-gray-400 hover:text-[#E1306C] transition"><Instagram size={24} /></a>
-            <a href="#" className="text-gray-400 hover:text-[#1DA1F2] transition"><Twitter size={24} /></a>
-            <a href="#" className="text-gray-400 hover:text-[#25D366] transition"><MessageCircle size={24} /></a>
-            <a href="#" className="text-gray-400 hover:text-[#EA4335] transition"><Mail size={24} /></a>
+            <a href="https://www.facebook.com/profile.php?id=61567982517175" target="_blank" className="text-gray-400 hover:text-[#1877F2] transition">
+              <Facebook size={24} />
+            </a>
+            <a href="https://x.com/cml1599897" target="_blank" className="text-gray-400 hover:text-[#000000] transition">
+              <Twitter size={24} />
+            </a>
+            <a href="https://wa.me/8615075550800" target="_blank" className="text-gray-400 hover:text-[#25D366] transition">
+              <MessageCircle size={24} />
+            </a>
+            <a href="mailto:Imc031368@gmail.com" className="text-gray-400 hover:text-[#EA4335] transition">
+              <Mail size={24} />
+            </a>
           </div>
 
           <div className="text-gray-400 text-[10px] space-y-1 tracking-wider">
-            <p className="font-semibold text-gray-600">Email: wangcathy411@gmail.com</p>
-            <p className="opacity-60 pt-4">© 2026 OUDOMAN LAB. All Rights Reserved.</p>
+            <p className="font-semibold text-gray-600">Email: Imc031368@gmail.com</p>
+            <p className="opacity-60 pt-4">© 2026 Handan Yueran Technology Company. All Rights Reserved.</p>
           </div>
         </div>
       </footer>
