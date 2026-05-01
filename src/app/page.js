@@ -13,24 +13,24 @@ export default function Home() {
   const categories = [
     {
       title: "Sunscreen",
-      desc: "High-density durable barrier for intense training.",
+      desc: "Superior UV protection for daily skin defense.",
       img: "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1000"
     },
     {
       title: "Repair Cream",
-      desc: "Sun protection designed for long outdoor hours.",
+      desc: "Deeply nourishes and restores skin vitality.",
       img: "https://images.unsplash.com/photo-1598440443997-3243c19fe382?q=80&w=1000"
     },
     {
       title: "Whitening lotion",
-      desc: "Eco-friendly, safe and extremely easy to absorb.",
+      desc: "Brightens and evens skin tone with natural extracts.",
       img: "https://images.unsplash.com/photo-1617897903246-719242758050?q=80&w=1000"
     }
   ];
 
   return (
-    <main className="min-h-screen bg-[#F0F7F2]">
-      {/* 顶部 Hero 区域 */}
+    <main className="min-h-screen bg-[#FDF8F9]">
+      {/* 顶部 Hero */}
       <section className="relative h-[55vh] flex items-center justify-center text-white text-center px-4 overflow-hidden">
         <div className="absolute inset-0 z-0">
           <img 
@@ -48,60 +48,48 @@ export default function Home() {
             Handan Yueran Technology Company
           </motion.h1>
           <p className="text-base md:text-lg font-medium mb-8 opacity-90 tracking-wide">
-            Professional Artificial Barrier Manufacturer
+            Innovative Skincare & Technology Solutions
           </p>
-          <button className="bg-[#2E7D32] text-white px-8 py-3 rounded-md font-bold hover:bg-[#1B5E20] transition-all transform hover:scale-105 shadow-lg">
-            View Technical Parameters (PDF)
+          <button className="bg-[#E91E63] text-white px-8 py-3 rounded-full font-bold hover:bg-[#C2185B] transition-all transform hover:scale-105 shadow-lg">
+            Browse Our Collection
           </button>
         </div>
       </section>
 
       {/* 产品展示区 */}
       <section className="py-20 px-6 max-w-6xl mx-auto">
-        <div className="grid md:grid-cols-3 gap-6">
+        <div className="grid md:grid-cols-3 gap-8">
           {categories.map((item, index) => (
             <motion.div 
               key={index}
               {...fadeInUp}
-              className="bg-white rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-500 text-center"
+              className="bg-white rounded-2xl overflow-hidden shadow-sm hover:shadow-xl transition-all duration-500 text-center border border-pink-50"
             >
-              <div className="h-56 overflow-hidden">
+              <div className="h-64 overflow-hidden">
                 <img src={item.img} className="w-full h-full object-cover hover:scale-110 transition duration-700" alt={item.title} />
               </div>
-              <div className="p-6">
-                <h3 className="text-lg font-bold text-[#2E7D32] mb-3">{item.title}</h3>
-                <p className="text-gray-500 text-xs leading-relaxed">
-                  {item.desc}
-                </p>
+              <div className="p-8">
+                <h3 className="text-xl font-bold text-[#880E4F] mb-3">{item.title}</h3>
+                <p className="text-gray-400 text-sm leading-relaxed">{item.desc}</p>
               </div>
             </motion.div>
           ))}
         </div>
       </section>
 
-      {/* 底部联系方式 */}
-      <footer className="py-12 bg-white border-t border-gray-100 text-center">
+      {/* 底部 */}
+      <footer className="py-16 bg-white border-t border-pink-100 text-center">
         <div className="max-w-4xl mx-auto px-4">
-          <h2 className="text-sm font-bold text-gray-700 mb-6 tracking-[0.2em] uppercase">Connect With Us</h2>
-          
-          <div className="flex justify-center gap-6 mb-8">
-            <a href="https://www.facebook.com/profile.php?id=61567982517175" target="_blank" className="text-gray-400 hover:text-[#1877F2] transition">
-              <Facebook size={24} />
-            </a>
-            <a href="https://x.com/cml1599897" target="_blank" className="text-gray-400 hover:text-[#000000] transition">
-              <Twitter size={24} />
-            </a>
-            <a href="https://wa.me/8615075550800" target="_blank" className="text-gray-400 hover:text-[#25D366] transition">
-              <MessageCircle size={24} />
-            </a>
-            <a href="mailto:Imc031368@gmail.com" className="text-gray-400 hover:text-[#EA4335] transition">
-              <Mail size={24} />
-            </a>
+          <h2 className="text-sm font-bold text-gray-800 mb-8 tracking-[0.3em] uppercase">Contact Us</h2>
+          <div className="flex justify-center gap-8 mb-10">
+            <a href="https://www.facebook.com/profile.php?id=61567982517175" target="_blank" className="text-gray-400 hover:text-[#1877F2] transition"><Facebook size={26} /></a>
+            <a href="https://x.com/cml1599897" target="_blank" className="text-gray-400 hover:text-black transition"><Twitter size={26} /></a>
+            <a href="https://wa.me/8615075550800" target="_blank" className="text-gray-400 hover:text-[#25D366] transition"><MessageCircle size={26} /></a>
+            <a href="mailto:Imc031368@gmail.com" className="text-gray-400 hover:text-[#EA4335] transition"><Mail size={26} /></a>
           </div>
-
-          <div className="text-gray-400 text-[10px] space-y-1 tracking-wider">
-            <p className="font-semibold text-gray-600">Email: Imc031368@gmail.com</p>
-            <p className="opacity-60 pt-4">© 2026 Handan Yueran Technology Company. All Rights Reserved.</p>
+          <div className="text-gray-400 text-xs space-y-2">
+            <p className="font-medium text-gray-500 underline decoration-pink-200">Email: Imc031368@gmail.com</p>
+            <p className="opacity-50 pt-6">© 2026 Handan Yueran Technology Company. 🌸</p>
           </div>
         </div>
       </footer>
