@@ -10,19 +10,20 @@ export default function Home() {
     transition: { duration: 0.8 }
   };
 
+  // 这里已经根据你的要求更新了产品标题
   const categories = [
     {
-      title: "Gym & Fitness",
+      title: "Sunscreen",
       desc: "High-density durable barrier for intense training.",
       img: "https://images.unsplash.com/photo-1556228720-195a672e8a03?q=80&w=1000"
     },
     {
-      title: "Professional Golf",
+      title: "Repair Cream",
       desc: "Sun protection designed for long outdoor hours.",
       img: "https://images.unsplash.com/photo-1598440443997-3243c19fe382?q=80&w=1000"
     },
     {
-      title: "Landscape & Pet",
+      title: "Whitening lotion",
       desc: "Eco-friendly, safe and extremely easy to absorb.",
       img: "https://images.unsplash.com/photo-1617897903246-719242758050?q=80&w=1000"
     }
